@@ -22,9 +22,10 @@ body {
 }
 #main .entryBar {
     position: absolute;
-    width: 100%;
+    width: 102%;
     height: 10%;
-    border-radius: 0px;
+    border-radius: 1vmin;
+    transform: translateX(-1%);
     background: -webkit-linear-gradient(top, rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%);
     transform-style: preserve-3d;
     animation-fill-mode: forwards;
@@ -121,11 +122,11 @@ body {
 }
 @keyframes exitR-entry {
     0% { transform: translateX(0); border-radius: 0px; animation-timing-function: cubic-bezier(0.11, 0.76, 0.52, 0.96); }
-    100% { transform: translateX(100%); border-radius: 1vmin; }
+    100% { transform: translateX(100%) }
 }
 @keyframes exitL-entry {
     0% { transform: translateX(0); border-radius: 0px; animation-timing-function: cubic-bezier(0.11, 0.76, 0.52, 0.96); }
-    100% { transform: translateX(-100%); border-radius: 1vmin; }
+    100% { transform: translateX(-100%) }
 }
 @keyframes crt {
     0% { background-position: 0 0, 0 0; animation-timing-function: linear; }
