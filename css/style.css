@@ -14,7 +14,7 @@ body {
     border: 1px solid #000;
     border-radius: 1vmin;
     position: relative;
-    height: 90vh;
+    height: 85vh;
     width: 90vw;
     z-index: 1;
     perspective: 1000px;
