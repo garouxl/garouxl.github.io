@@ -229,7 +229,7 @@ body {
 .targetH {
     border-top: 1px solid;
     width: 200vw;
-    transform: translateY(-1vh);
+    transform: translateY(-1vw);
 }
 .targetV {
     border-left: 1px solid;

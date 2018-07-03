@@ -9,10 +9,10 @@
     function target(event) {
         doc.getElementsByClassName(
             "targetV"
-        )[0].style.transform = `translateX(${event.clientX - 79}px)`;
+        )[0].style.transform = `translateX(${event.offsetX}px)`;
         doc.getElementsByClassName(
             "targetH"
-        )[0].style.transform = `translateY(${event.clientY - 43}px)`;
+        )[0].style.transform = `translateY(${event.offsetY}px)`;
     }
     // detrava a tela
     function unLock() {
