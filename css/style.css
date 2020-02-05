@@ -23,9 +23,7 @@ body {
   z-index: 8;
   margin: 0;
 }
-main {
-  position: relative;
-  background: #0e0e0e;
+.main {
   border: 1px solid #000;
   border-radius: 1vmin;
   position: relative;
@@ -42,8 +40,8 @@ main {
   position: absolute;
   width: 102%;
   height: 10%;
-  border-radius: 1vmin;
-  transform: scaleX(1.1);
+  transform: translateX(-1rem);
+  border-radius: 1rem;
   background: -webkit-linear-gradient(
     top,
     rgba(149, 149, 149, 1) 0%,
@@ -154,6 +152,11 @@ main {
   animation-fill-mode: forwards;
 }
 
+.skew {
+  animation: skew 5s infinite;
+  animation-fill-mode: forwards;
+}
+
 .doge-animate {
   transform: translateY(0);
   animation: doge-animate 2s;
@@ -214,16 +217,34 @@ main {
     text-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
   }
   50% {
-    text-shadow: 0 0 .3rem rgb(193, 255, 49, .7);
-  }
-  65% {
-    text-shadow: 0 0 .3rem rgb(193, 255, 49, .1);
-  }
-  70% {
     text-shadow: 0 0 .3rem rgb(193, 255, 49, .9);
   }
   100% {
     text-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
+  }
+}
+
+@keyframes skew {
+  0% {
+    transform: skew(0);
+  }
+  64% {
+    transform: skew(0);
+  }
+  65% {
+    transform: skew(80deg, 3deg);
+  }
+  66% {
+    transform: skew(0);
+  }
+  67% {
+    transform: skew(-80deg, 7deg);
+  }
+  68% {
+    transform: skew(0);
+  }
+  100% {
+    transform: skew(0);
   }
 }
 
@@ -294,7 +315,7 @@ main {
 /* GERAL */
 
 .list {
-  margin: 2rem 1rem 1rem 2rem;
+  margin: 4rem 1rem 1rem 4rem;
 }
 
 .list__item {
@@ -310,7 +331,7 @@ main {
 .list__link:visited {
   color: rgb(173, 255, 47);
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: rgb(173, 255, 47);
   text-decoration: none;
   background-image: linear-gradient(180deg, rgb(173, 255, 47) 100%,rgb(245, 47, 228) 0%);
