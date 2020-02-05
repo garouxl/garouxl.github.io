@@ -15,7 +15,7 @@ html {
 
 body {
   align-items: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: monospace;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -58,9 +58,11 @@ main {
   animation-fill-mode: forwards;
 }
 .entry__bar--left {
+  transform-origin: left;
   animation: exitR-entry 1s;
 }
 .entry__bar--right {
+  transform-origin: right;
   animation: exitL-entry 1s;
 }
 
@@ -71,47 +73,47 @@ main {
 }
 .entry__bar--02 {
   top: 10%;
-  animation-delay: 0.1s;
+  animation-delay: .1s;
   z-index: 3;
 }
 .entry__bar--03 {
   top: 20%;
-  animation-delay: 0.2s;
+  animation-delay: .2s;
   z-index: 4;
 }
 .entry__bar--04 {
   top: 30%;
-  animation-delay: 0.3s;
+  animation-delay: .3s;
   z-index: 5;
 }
 .entry__bar--05 {
   top: 40%;
-  animation-delay: 0.4s;
+  animation-delay: .4s;
   z-index: 6;
 }
 .entry__bar--06 {
   top: 50%;
-  animation-delay: 0.5s;
+  animation-delay: .5s;
   z-index: 11;
 }
 .entry__bar--07 {
   top: 60%;
-  animation-delay: 0.6s;
+  animation-delay: .6s;
   z-index: 10;
 }
 .entry__bar--08 {
   top: 70%;
-  animation-delay: 0.7s;
+  animation-delay: .7s;
   z-index: 9;
 }
 .entry__bar--09 {
   top: 80%;
-  animation-delay: 0.8s;
+  animation-delay: .8s;
   z-index: 8;
 }
 .entry__bar--10 {
   top: 90%;
-  animation-delay: 0.9s;
+  animation-delay: .9s;
   z-index: 7;
 }
 
@@ -119,12 +121,12 @@ main {
   background: url("../img/doge.png") no-repeat;
   background-size: contain;
   position: absolute;
-  transform: translateY(-100px);
+  transform: translateY(-10rem);
   left: 10%;
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
   z-index: 1;
-  transition: 300ms;
+  transition: .3s;
 }
 
 /* animations */
@@ -137,14 +139,25 @@ main {
       transparent
     ),
     repeating-linear-gradient(transparent, rgba(80, 80, 80, 0.2) 2px, transparent 4px);
-  background-size: 100% 180px, 100% 100%;
+  background-size: 100% 18rem, 100% 100%;
   animation: crt 25s infinite;
   animation-fill-mode: forwards;
 }
+
+.glow-text {
+  animation: glow-text 2s infinite;
+  animation-fill-mode: forwards;
+}
+
+.glow-box {
+  animation: glow-box 2s infinite;
+  animation-fill-mode: forwards;
+}
+
 .doge-animate {
   transform: translateY(0);
   animation: doge-animate 2s;
-  animation-delay: 0.3s;
+  animation-delay: .3s;
   animation-fill-mode: forwards;
 }
 
@@ -169,7 +182,7 @@ main {
 @keyframes exitR-entry {
   0% {
     transform: translateX(0);
-    border-radius: 0px;
+    border-radius: 0;
     animation-timing-function: cubic-bezier(0.11, 0.76, 0.52, 0.96);
   }
   100% {
@@ -179,7 +192,7 @@ main {
 @keyframes exitL-entry {
   0% {
     transform: translateX(0);
-    border-radius: 0px;
+    border-radius: 0;
     animation-timing-function: cubic-bezier(0.11, 0.76, 0.52, 0.96);
   }
   100% {
@@ -192,9 +205,40 @@ main {
     animation-timing-function: linear;
   }
   100% {
-    background-position: 0 -180px, 0 0;
+    background-position: 0 -18rem, 0 0;
   }
 }
+
+@keyframes glow-text {
+  0% {
+    text-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
+  }
+  50% {
+    text-shadow: 0 0 .3rem rgb(193, 255, 49, .7);
+  }
+  65% {
+    text-shadow: 0 0 .3rem rgb(193, 255, 49, .1);
+  }
+  70% {
+    text-shadow: 0 0 .3rem rgb(193, 255, 49, .9);
+  }
+  100% {
+    text-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
+  }
+}
+
+@keyframes glow-box {
+  0% {
+    box-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
+  }
+  50% {
+    box-shadow: 0 0 .3rem rgb(193, 255, 49, 9);
+  }
+  100% {
+    box-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
+  }
+}
+
 @keyframes doge-animate {
   0% {
     transform: translateY(0);
@@ -204,25 +248,25 @@ main {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-1rem);
   }
   55% {
     transform: translateY(0);
   }
   60% {
-    transform: translateY(-10px);
+    transform: translateY(-1rem);
   }
   65% {
     transform: translateY(0);
   }
   70% {
-    transform: translateY(-10px);
+    transform: translateY(-1rem);
   }
   80% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(-100px);
+    transform: translateY(-10rem);
   }
 }
 
@@ -234,7 +278,7 @@ main {
   position: absolute;
   color: rgb(173, 255, 47);
   content: "";
-  transition: 500ms cubic-bezier(0, 0, 0.5, 1);
+  transition: .5s cubic-bezier(0, 0, .5, 1);
 }
 .target-h {
   border-top: 1px solid;
@@ -250,30 +294,34 @@ main {
 /* GERAL */
 
 .list {
-  margin: 10px;
+  margin: 2rem 1rem 1rem 2rem;
 }
 
 .list__item {
   list-style-type: none;
-  margin-bottom: 10px;
+
+}
+
+.list__item:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .list__link:link,
 .list__link:visited {
+  color: rgb(173, 255, 47);
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: rgb(173, 255, 47);
   text-decoration: none;
-  background: linear-gradient(180deg, rgb(173, 255, 47),rgb(173, 255, 47));
+  background-image: linear-gradient(180deg, rgb(173, 255, 47) 100%,rgb(245, 47, 228) 0%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  transition: background 3s cubic-bezier(1, 0.01, 0.59, 1.07);
 }
 
 .list__link:hover,
 .list__link:active {
-  background: linear-gradient(90deg, rgb(173, 255, 47), rgb(245, 47, 228));
+  background-image: linear-gradient(90deg, rgb(173, 255, 47) 0%, rgb(245, 47, 228) 50%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
