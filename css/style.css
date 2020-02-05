@@ -38,7 +38,7 @@ body {
 
 .entry .entry__bar {
   position: absolute;
-  width: 102%;
+  width: 105%;
   height: 10%;
   transform: translateX(-1rem);
   border-radius: 1rem;
