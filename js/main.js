@@ -2,8 +2,8 @@
   'use strict'
   const $body = doc.querySelector('body')
   const $main = doc.querySelector('main')
-  const $targetV = doc.querySelector('.targetV')
-  const $targetH = doc.querySelector('.targetH')
+  const $targetV = doc.querySelector('.target-v')
+  const $targetH = doc.querySelector('.target-h')
   const $doge = doc.querySelector('.doge')
   // seta vertical
   function resizeBody () {
@@ -12,17 +12,16 @@
   }
   // barras de target
   function target (event) {
-      console.log(event)
     $targetV.style.transform = `translateX(${event.layerX}px)`
     $targetH.style.transform = `translateY(${event.layerY}px)`
   }
-  // detrava a tela
+  // destrava a tela
   function unLock () {
-    const barsL = Array.from(doc.querySelectorAll('.entryBar:nth-child(odd)'))
-    const barsR = Array.from(doc.querySelectorAll('.entryBar:nth-child(even)'))
+    const barsL = Array.from(doc.querySelectorAll('.entry__bar:nth-child(odd)'))
+    const barsR = Array.from(doc.querySelectorAll('.entry__bar:nth-child(even)'))
     for (let i = 0; i <= barsL.length - 1; i++) {
-      barsL[i].classList.add('entryBarL')
-      barsR[i].classList.add('entryBarR')
+      barsL[i].classList.add('entry__bar--left')
+      barsR[i].classList.add('entry__bar--right')
     }
     $main.addEventListener('click', target, false)
   }
