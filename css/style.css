@@ -185,21 +185,19 @@ body {
 @keyframes exitR-entry {
   0% {
     transform: translateX(0);
-    border-radius: 0;
     animation-timing-function: cubic-bezier(0.11, 0.76, 0.52, 0.96);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(101%);
   }
 }
 @keyframes exitL-entry {
   0% {
     transform: translateX(0);
-    border-radius: 0;
     animation-timing-function: cubic-bezier(0.11, 0.76, 0.52, 0.96);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-101%);
   }
 }
 @keyframes crt {
