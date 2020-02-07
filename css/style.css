@@ -317,16 +317,19 @@ body {
 /* GERAL */
 
 .list {
-  margin: 4rem 1rem 1rem 4rem;
+  display: inline-block;
+  margin: 3rem;
 }
 
 .list__item {
   list-style-type: none;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 
 }
 
 .list__item:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .list__link:link,
