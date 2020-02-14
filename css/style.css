@@ -43,7 +43,7 @@ body {
 .entry .entry__bar {
   position: absolute;
   width: 110vw;
-  height: 10%;
+  height: 11%;
   transform: translateX(-1rem);
   border-radius: 1rem;
   background: -webkit-linear-gradient(
@@ -147,17 +147,17 @@ body {
 }
 
 .glow-text {
-  animation: glow-text 2s infinite;
+  animation: glow-text 4s infinite;
   animation-fill-mode: forwards;
 }
 
 .glow-box {
-  animation: glow-box 2s infinite;
+  animation: glow-box 4s infinite;
   animation-fill-mode: forwards;
 }
 
 .skew {
-  animation: skew 5s infinite;
+  animation: skew 7s infinite;
   animation-fill-mode: forwards;
 }
 
@@ -219,7 +219,10 @@ body {
     text-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
   }
   50% {
-    text-shadow: 0 0 .3rem rgb(193, 255, 49, .9);
+    text-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
+  }
+  75% {
+    text-shadow: 0 0 .3rem rgb(193, 255, 49, 1);
   }
   100% {
     text-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
@@ -230,19 +233,28 @@ body {
   0% {
     transform: skew(0);
   }
-  64% {
+  10% {
     transform: skew(0);
   }
-  65% {
-    transform: skew(80deg, 3deg);
+  25% {
+    transform: skew(10deg, 0deg);
   }
-  66% {
+  40% {
     transform: skew(0);
   }
-  67% {
-    transform: skew(-80deg, 7deg);
+  94% {
+    transform: skew(0);
   }
-  68% {
+  95% {
+    transform: skew(85deg, 6deg);
+  }
+  96% {
+    transform: skew(0);
+  }
+  97% {
+    transform: skew(-85deg, 14deg);
+  }
+  98% {
     transform: skew(0);
   }
   100% {
@@ -255,6 +267,9 @@ body {
     box-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
   }
   50% {
+    box-shadow: 0 0 .3rem rgb(193, 255, 49, 0);
+  }
+  75% {
     box-shadow: 0 0 .3rem rgb(193, 255, 49, 9);
   }
   100% {

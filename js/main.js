@@ -5,6 +5,7 @@
   const $targetV = doc.querySelector('.target-v')
   const $targetH = doc.querySelector('.target-h')
   const $doge = doc.querySelector('.doge')
+  const $link = doc.querySelectorAll('.list__link')
   // seta vertical
   function resizeBody () {
     $body.style.height =
@@ -37,10 +38,19 @@
       }
     }
   }
+
+  function newWindow (event) {
+    event.preventDefault()
+    window.open(event.target.href)
+  }
   resizeBody()
+  $link.forEach(item => {
+    item.addEventListener('click', newWindow)
+  })
   win.addEventListener('resize', resizeBody)
   $main.addEventListener('click', unLock)
   konami(() =>
     $doge.classList.toggle('doge-animate')
   )
+
 })(window, document)
