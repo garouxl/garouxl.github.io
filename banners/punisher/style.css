@@ -1,0 +1,324 @@
+*,
+:after,
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
+
+.about {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.bannerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow {
+  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, .5);
+}
+
+.banner {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 0 450px;
+  height: 0;
+  width: 300px;
+}
+
+.bgTeste {
+  background-image:url("imgs/background.jpg");
+  opacity: 1;
+  z-index: 1;
+}
+
+.step-1 {
+  background-image:url("imgs/step-1.png");
+  animation: fade 3s;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+.step-2 {
+  background-image:url("imgs/step-2.png");
+  animation: blinkOutro 1s 2;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+.step-3 {
+  background-image:url("imgs/step-3.jpg");
+  animation: fade 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  z-index: 3;
+}
+
+.step-3A {
+  background-image:url("imgs/step-3A.jpg");
+  animation: blink 1s 3;
+  animation-delay: 6.5s;
+  animation-fill-mode: forwards;
+  z-index: 3;
+}
+
+.step-4 {
+  background-image:url("imgs/step-4.jpg");
+  animation: fade 1s, image-blinkR 1s;
+  animation-delay: 7s;
+  animation-fill-mode: forwards;
+  z-index: 4;
+}
+
+.step-5 {
+  background-image:url("imgs/step-5.jpg");
+  animation: fade 3s, image-blinkL 3s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+.step-6A {
+  background-image:url("imgs/step-6A.png");
+  animation: blink 1s 3;
+  animation-delay: 8.4s;
+  animation-fill-mode: forwards;
+  z-index: 6;
+}
+
+.step-6B {
+  background-image:url("imgs/step-6B.png");
+  animation: fade 0.3s, image-blinkL 0.7s;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+  z-index: 6;
+}
+
+.step-6C {
+  background-image:url("imgs/step-6C.png");
+  animation: fade 0.5s, image-blinkR 0.8s;
+  animation-delay: 9.8s;
+  animation-fill-mode: forwards;
+  z-index: 6;
+}
+
+.step-7 {
+  background-image:url("imgs/step-7.jpg");
+  animation: fade 3s, image-blinkL 3s infinite;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+  z-index: 7;
+}
+
+.step-8 {
+  background-color: transparent;
+  background-image: linear-gradient(
+      transparent,
+      rgba(200, 200, 200, 0.1) 30%,
+      rgba(200, 200, 200, 0.1) 70%,
+      transparent
+      ),
+      repeating-linear-gradient(
+      transparent,
+      rgba(80, 80, 80, 0.2) 2px,
+      transparent 4px
+      );
+  background-size: 100% 180px, 100% 100%;
+  animation: fade 3s, crt 10s infinite;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+  z-index: 8;
+  }
+
+@keyframes crt {
+  0% {
+    background-position: 0 0, 0 0;
+    animation-timing-function: linear;
+  }
+  100% {
+    background-position: 0 -180px, 0 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.6, 0.09, 0, 0.92);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    animation-timing-function: linear;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes image-blinkL {
+  0% {
+    opacity: 0.2;
+    transform: skewX(0deg);
+  }
+  20% {
+    opacity: 0.5;
+    transform: skewX(0deg);
+  }
+  21% {
+    opacity: 0.7;
+    transform: skewX(-3deg);
+  }
+  35% {
+    opacity: 1;
+    transform: skewX(0deg);
+  }
+  35.5% {
+    opacity: 0.6;
+    transform: skewX(70deg);
+  }
+  36% {
+    transform: skewX(-60deg);
+  }
+  36.5% {
+    opacity: 1;
+    transform: skewX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: skewX(0deg);
+  }
+}
+
+@keyframes image-blinkR {
+  0% {
+    transform: skewX(0deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  21% {
+    transform: skewX(-3deg);
+  }
+  35% {
+    opacity: 1;
+    transform: skewX(0deg);
+  }
+  35.5% {
+    opacity: 0.3;
+    transform: skewX(-180deg);
+  }
+  36% {
+    transform: skewX(90deg);
+  }
+  36.5% {
+    opacity: 1;
+    transform: skewX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: skewX(0deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  25.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blinkOutro {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  30.1% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  40.1% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  70.1% {
+    opacity: 0;
+  }
+  99.9% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

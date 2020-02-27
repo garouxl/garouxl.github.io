@@ -1,0 +1,303 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
+
+.about {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.bannerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow {
+  box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, .5);
+}
+
+.main {
+  display: block;
+  width: 970px;
+  height: 250px;
+  background: url("imgs/bg.jpg") center center no-repeat;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.container {
+  position: absolute;
+}
+
+.step-0-descubra {
+  background: url("imgs/step0.png") 0 0 no-repeat;
+  animation: fade 1s, bounce-descubra 1s infinite;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  height: 42px;
+  width: 197px;
+  top: 170px;
+  left: 682px;
+  z-index: 1;
+}
+.step-1-glitter {
+  background: url("imgs/step1.png") 0 -150px no-repeat;
+  animation: fade 1s, posTToB-glitter 10s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  height: 250px;
+  width: 970px;
+  left: 0;
+  z-index: 1;
+}
+.step-2-unicornioCartoon {
+  background: url("imgs/step2.png") no-repeat;
+  animation: posLToR-unicornioCartoon 1s, rotate-unicornioCartoon 2s infinite;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  top: 132px;
+  left: -125px;
+  width: 125px;
+  height: 117px;
+  z-index: 2;
+}
+
+.step-3-shakeTexto {
+  background: url("imgs/step3.png") no-repeat;
+  animation: fade 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  height: 250px;
+  opacity: 0;
+  width: 970px;
+  opacity: 0;
+  z-index: 6;
+}
+
+.step-4-rainbow {
+  background: url("imgs/step4.png") no-repeat;
+  animation: lToR-rainbow 1s, fade 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  height: 148px;
+  top: 102px;
+  left: 294px;
+  z-index: 4;
+}
+
+.step-5-shake {
+  background: url("imgs/step5.png") no-repeat;
+  animation: posBToT-shake 1s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  height: 299px;
+  width: 177px;
+  top: 250px;
+  left: 393px;
+  z-index: 5;
+}
+
+.step-6-unicornioTexto {
+  background: url("imgs/step6.png") no-repeat;
+  animation: fade 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  height: 250px;
+  width: 970px;
+  z-index: 6;
+}
+
+.step-7-logo {
+  background: url("imgs/step7.png") no-repeat;
+  animation: fade 1s;
+  animation-delay: 1.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  height: 250px;
+  width: 970px;
+  z-index: 7;
+}
+
+/* Rainbow */
+.rainbow {
+  position: absolute;
+  height: 250px;
+  width: 970px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.rainbow__row {
+  position: absolute;
+  width: 970px;
+  height: 20%;
+  left: 0;
+}
+
+.rainbow--red {
+  top: 0%;
+  background-color: #ff0200;
+  animation: posLToR-overlayRainbow 0.8s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+}
+.rainbow--purple {
+  top: 20%;
+  background-color: #e500ff;
+  animation: posLToR-overlayRainbow 0.8s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+.rainbow--blue {
+  top: 40%;
+  background-color: #0057ff;
+  animation: posLToR-overlayRainbow 0.8s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+.rainbow--green {
+  top: 60%;
+  background-color: #00ff60;
+  animation: posLToR-overlayRainbow 0.8s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+.rainbow--yeallow {
+  top: 80%;
+  background-color: #fff100;
+  animation: posLToR-overlayRainbow 0.8s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+/* animations */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.6, 0.09, 0, 0.92);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes lToR-rainbow {
+  0% {
+    width: 0px;
+    animation-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  }
+  100% {
+    width: 379px;
+  }
+}
+@keyframes posLToR-unicornioCartoon {
+  0% {
+    left: -125px;
+    animation-timing-function: cubic-bezier(1, 1.54, 0.33, 1.03);
+  }
+  100% {
+    left: 52px;
+  }
+}
+@keyframes rotate-unicornioCartoon {
+  0% {
+    transform: rotateY(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  64% {
+    transform: rotateY(0deg);
+  }
+  65% {
+    transform: rotateY(180deg);
+  }
+  80% {
+    transform: rotateY(180deg);
+  }
+  81% {
+    transform: rotateY(0deg);
+  }
+  89% {
+    transform: rotateY(0deg);
+  }
+  90% {
+    transform: rotateY(180deg);
+  }
+  99% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes posBToT-shake {
+  0% {
+    top: 250px;
+    animation-timing-function: cubic-bezier(0.76, 1.44, 0.32, 0.92);
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes bounce-descubra {
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: scale(1);
+  }
+  65% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes posTToB-glitter {
+  0% {
+    top: -250px;
+    animation-timing-function: ease-out;
+  }
+  25% {
+    top: -20px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes posLToR-overlayRainbow {
+  0% {
+    left: 0;
+    animation-timing-function: cubic-bezier(1, 1.54, 0.33, 1.03);
+  }
+  100% {
+    left: 100%;
+  }
+}

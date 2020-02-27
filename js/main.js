@@ -2,8 +2,8 @@
   'use strict'
   const $body = doc.querySelector('body')
   const $main = doc.querySelector('main')
-/*   const $targetV = doc.querySelector('.target-v')
-  const $targetH = doc.querySelector('.target-h') */
+  const $targetV = doc.querySelector('.target-v')
+  const $targetH = doc.querySelector('.target-h')
   const $doge = doc.querySelector('.doge')
   const $link = doc.querySelectorAll('[data-js=link]')
   const $easter = doc.querySelector('[data-js=easter]')
@@ -13,10 +13,10 @@
       window.innerHeight + 'px'
   }
   // barras de target
-/*   function target (event) {
-    $targetV.style.transform = `translateX(${event.layerX}px)`
-    $targetH.style.transform = `translateY(${event.layerY}px)`
-  } */
+  function target (event) {
+    $targetV.style.transform = `translateX(${event.clientX - 68}px)`
+    $targetH.style.transform = `translateY(${event.clientY - 58}px)`
+  }
   // destrava a tela
   function unLock () {
     const barsL = Array.from(doc.querySelectorAll('.entry__bar:nth-child(odd)'))
@@ -25,7 +25,7 @@
       barsL[i].classList.add('entry__bar--left')
       barsR[i].classList.add('entry__bar--right')
     }
-    // $main.addEventListener('click', target, false)
+    $body.addEventListener('click', target, false)// mousemove
   }
 
   function konami (callback) {
