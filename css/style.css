@@ -354,7 +354,7 @@ body {
 /* GERAL */
 
 .home {
-  margin: 3rem;
+  padding: 3rem;
   height: 85vh;
   overflow-y: auto;
   overflow-x: hidden;
