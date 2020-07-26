@@ -1,3 +1,4 @@
+// Formatação usando padrão StandardJS
 ;((win, doc) => {
   'use strict'
 
@@ -74,3 +75,12 @@
 })(window, document)
 
 window.garou.app.init()
+
+window.console.error('%c Procurando algo? =o.O=', 'font-weight: bold; font-style: oblique; font-size:20px;')
+
+window.console.warn(`\n Olá visitante, vejo que se interessou em ver meu código!
+\n Para facilitar seu trabalho fique a vontade para acessar meu perfil no GITHUB:;
+\n https://github.com/garouxl/
+\n Lá você poderá baixar esse projeto bem como todos os outros aqui listados;
+\n Ah, e não custa nada deixar aqui meu perfil do LinkedIn, né!
+\n https://www.linkedin.com/in/laalmeida/`)
