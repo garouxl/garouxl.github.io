@@ -51,6 +51,21 @@
       window.open(event.target.href)
     }
 
+    function olar() {
+      window.console.error('%c Olar pessoa desenvolvedora! :D ', 'font-weight: bold; font-style: oblique; font-size:25px;')
+
+      window.console.warn('%c Bom ver você aqui, olha, estou a procura de uma nova oportunidade no mercado! ', 'font-weight: bold; font-style: oblique; font-size:20px;')
+
+      window.console.error('%c Segue o contatinho, bóra trocar uma ideia: vempari@gmail.com', 'font-weight: bold; font-style: oblique; font-size:15px;')
+
+      window.console.warn(`\n Olá visitante, vejo que se interessou em ver meu código!
+      \n Para facilitar seu trabalho fique a vontade para acessar meu perfil no GITHUB:;
+      \n https://github.com/garouxl/
+      \n Lá você poderá baixar esse projeto bem como todos os outros aqui listados;
+      \n Ah, e não custa nada deixar aqui meu perfil do LinkedIn, né!
+      \n https://www.linkedin.com/in/laalmeida/`)
+    }
+
     function startMeUp () {
       resizeBody()
       win.addEventListener('resize', resizeBody)
@@ -61,7 +76,9 @@
       konami(() =>
         $doge.classList.toggle('doge-animate')
       )
+      olar()
     }
+
     return {
       init: () => {
         startMeUp()
@@ -75,12 +92,3 @@
 })(window, document)
 
 window.garou.app.init()
-
-window.console.error('%c Procurando algo? =o.O=', 'font-weight: bold; font-style: oblique; font-size:20px;')
-
-window.console.warn(`\n Olá visitante, vejo que se interessou em ver meu código!
-\n Para facilitar seu trabalho fique a vontade para acessar meu perfil no GITHUB:;
-\n https://github.com/garouxl/
-\n Lá você poderá baixar esse projeto bem como todos os outros aqui listados;
-\n Ah, e não custa nada deixar aqui meu perfil do LinkedIn, né!
-\n https://www.linkedin.com/in/laalmeida/`)
