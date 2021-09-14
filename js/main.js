@@ -92,6 +92,11 @@
         glare: true,   // if it should have a "glare" effect
         "max-glare": 0.6,
         reverse: true,
+        gyroscope:  true,
+        gyroscopeMinAngleX: -45,
+        gyroscopeMaxAngleX: 45,
+        gyroscopeMinAngleY: -45,
+        gyroscopeMaxAngleY: 45,
       })
     }
 
