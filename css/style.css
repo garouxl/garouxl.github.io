@@ -27,12 +27,13 @@ body {
   z-index: 8;
   margin: 0;
 }
+
 .main {
   border: 1px solid #000;
   border-radius: 1vmin;
   position: relative;
-  height: 95vh;
-  width: 90vw;
+  height: 85vh;
+  width: 80vw;
   z-index: 1;
   perspective: 100rem;
   overflow: hidden;
@@ -58,6 +59,7 @@ body {
   );
   transform-style: preserve-3d;
   animation-fill-mode: forwards;
+  cursor: pointer;
 }
 .entry__bar--left {
   transform-origin: left;
